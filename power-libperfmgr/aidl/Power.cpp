@@ -83,10 +83,41 @@ Power::Power(std::shared_ptr<HintManager> hm)
     ALOGI("PowerHAL ready to process hints");
 }
 
+static int sysfs_write(const char *path, const char *s)
+{
+    char buf[80];
+    int len;
+    int ret = 0;
+    int fd = open(path, O_WRONLY);
+
+    if (fd < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error opening %s: %s\n", path, buf);
+        return -1 ;
+    }
+
+    len = write(fd, s, strlen(s));
+    if (len < 0) {
+        strerror_r(errno, buf, sizeof(buf));
+        ALOGE("Error writing to %s: %s\n", path, buf);
+
+        ret = -1;
+    }
+
+    close(fd);
+
+    return ret;
+}
+
 ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     LOG(DEBUG) << "Power setMode: " << toString(type) << " to: " << enabled;
     ATRACE_INT(toString(type).c_str(), enabled);
     switch (type) {
+        case Mode::DOUBLE_TAP_TO_WAKE:
+            {
+            sysfs_write("/proc/touchpanel/double_tap_enable", enabled ? "1" : "0");
+            }
+            break;
         case Mode::LOW_POWER:
             break;
         case Mode::SUSTAINED_PERFORMANCE:
@@ -130,8 +161,6 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
                 break;
             }
             [[fallthrough]];
-        case Mode::DOUBLE_TAP_TO_WAKE:
-            [[fallthrough]];
         case Mode::FIXED_PERFORMANCE:
             [[fallthrough]];
         case Mode::EXPENSIVE_RENDERING:
@@ -166,8 +195,8 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 
 ndk::ScopedAStatus Power::isModeSupported(Mode type, bool *_aidl_return) {
     bool supported = mHintManager->IsHintSupported(toString(type));
-    // LOW_POWER handled insides PowerHAL specifically
-    if (type == Mode::LOW_POWER) {
+    // LOW_POWER and DOUBLE_TAP_TO_WAKE handled insides PowerHAL specifically
+    if (type == Mode::LOW_POWER || type == Mode::DOUBLE_TAP_TO_WAKE) {
         supported = true;
     }
     LOG(INFO) << "Power mode " << toString(type) << " isModeSupported: " << supported;
