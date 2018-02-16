@@ -15,3 +15,6 @@ iorapd.readahead.enable=true
 
 # Pre-rendering
 ro.vendor.perf.scroll_opt=true
+
+# IO Cgroups
+ro.vendor.iocgrp.config=1
