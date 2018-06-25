@@ -193,6 +193,9 @@ PRODUCT_PACKAGES += \
     apex_metadata.rc \
     init.realmehub.rc
 
+# Dex
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.composer@2.2-service \
