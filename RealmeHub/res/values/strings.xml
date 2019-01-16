@@ -52,4 +52,5 @@
 
     <!-- Dirac Sound -->
     <string name="dirac_title">Dirac sound enhancer</string>
+    <string name="dirac_summary">Optimize audio quality</string>
 </resources>
