@@ -1,0 +1,13 @@
+type hal_touch_sdm710, coredomain, domain;
+hal_server_domain(hal_touch_sdm710, hal_lineage_touch)
+
+type hal_touch_sdm710_exec, vendor_file_type, exec_type, file_type;
+init_daemon_domain(hal_touch_sdm710)
+
+# Allow access to gesture enable nodes
+allow hal_touch_sdm710 proc_touchpanel:dir search;
+allow hal_touch_sdm710 proc_touchpanel:file rw_file_perms;
+allow hal_touch_sdm710 sysfs_fpc_key:dir { search };
+allow hal_touch_sdm710 sysfs_fpc_key:file rw_file_perms;
+allow hal_touch_sdm710 vendor_file:file { execute }; 
+allow hal_touch_sdm710 vendor_file:file rw_file_perms;

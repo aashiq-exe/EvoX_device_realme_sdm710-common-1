@@ -25,3 +25,6 @@ type vendor_sysfs_graphics, sysfs_type, fs_type;
 
 # CABC Mode
 type sysfs_graphics_ffl, sysfs_type, fs_type;
+
+# Touch Hal
+type sysfs_fpc_key, fs_type, sysfs_type;
