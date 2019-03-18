@@ -62,6 +62,21 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="sound"
+        android:title="@string/sound_title">
+
+        <Preference
+            android:key="dirac"
+            android:icon="@drawable/ic_dirac_icon"
+            android:title="@string/dirac_title">
+            <intent
+                    android:action="android.intent.action.MAIN"
+                    android:targetPackage="org.lineageos.settings.dirac"
+                    android:targetClass="org.lineageos.settings.dirac.DiracActivity" />
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="misc"
         android:title="@string/misc_title">
 
