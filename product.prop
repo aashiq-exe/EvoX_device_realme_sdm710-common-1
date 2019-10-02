@@ -9,3 +9,7 @@ ro.lmk.log_stats=true
 
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
+
+# IORap
+iorapd.readahead.enable=true
+
