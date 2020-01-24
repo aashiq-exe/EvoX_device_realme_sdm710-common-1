@@ -145,6 +145,10 @@ PRODUCT_PACKAGES += \
     libxml2 \
     GcamGo
 
+# Charger
+PRODUCT_PACKAGES += \
+    product_charger_res_images
+
 # CNE
 PRODUCT_PACKAGES += \
     cneapiclient \
