@@ -13,3 +13,5 @@ ro.sys.fw.dex2oat_thread_count=8
 # IORap
 iorapd.readahead.enable=true
 
+# Pre-rendering
+ro.vendor.perf.scroll_opt=true
