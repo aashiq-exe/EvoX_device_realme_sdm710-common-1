@@ -62,3 +62,6 @@ vendor.thermal.config                            u:object_r:vendor_thermal_prop:
 
 # Perf Profile
 perf.profile                            u:object_r:vendor_perf_prop:s0
+
+# Dirac
+persist.audio.dirac                           u:object_r:dirac_prop:s0
