@@ -19,3 +19,10 @@ genfscon proc /qcom_flash1        u:object_r:proc_flash:s0
 
 # CABC
 genfscon sysfs /sys/kernel/oppo_display/cabc          u:object_r:sysfs_graphics_ffl:s0
+
+# Power
+genfscon sysfs /devices/virtual/graphics/fb0                    u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb1                    u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/virtual/graphics/fb2                    u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,gpubw             u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,cpubw             u:object_r:sysfs_devfreq:s0

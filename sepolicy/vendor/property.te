@@ -14,3 +14,6 @@ type vendor_thermal_prop, property_type;
 
 # Perf Profile
 type vendor_perf_prop, property_type;
+
+# Power
+type vendor_power_prop, property_type;
