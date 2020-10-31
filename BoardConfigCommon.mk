@@ -47,6 +47,7 @@ BOARD_KERNEL_CMDLINE += androidboot.init_fatal_reboot_target=recovery
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DTBO := true
+KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1851
 TARGET_KERNEL_NEW_GCC_COMPILE := true
 
