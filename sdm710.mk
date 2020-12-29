@@ -179,7 +179,8 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.target.rc \
     ueventd.qcom.rc \
-    apex_metadata.rc
+    apex_metadata.rc \
+    init.realmehub.rc
 
 # Display
 PRODUCT_PACKAGES += \
@@ -356,6 +357,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    libtflite \
    libtextclassifier_hash
+
+# RealmeHub
+PRODUCT_PACKAGES += \
+    RealmeHub \
+    RealmeDoze
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

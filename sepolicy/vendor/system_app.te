@@ -1,6 +1,16 @@
 #allow system_app vibrator_sysfs:file rw_file_perms;
+allow system_app proc_touchpanel:dir { search };
 allow system_app proc_touchpanel:file rw_file_perms;
 allow system_app oppo_debug_prop:file { read open getattr };
 
 r_dir_file(system_app, proc_touchpanel);
 #r_dir_file(system_app, vibrator_sysfs);
+
+# RealmeHub
+allow system_app vendor_sysfs_graphics:file { getattr open read };
+
+# FPS Info
+allow system_app sysfs:file { getattr open read };
+
+# OTG Tile
+allow system_app sysfs_usb_supply:file { write };
