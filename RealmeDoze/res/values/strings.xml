@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2014-2017 The OmniROM Project
+<!--
+     Copyright (C) 2013-2016 The CyanogenMod Project
+               (C) 2017 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,26 +15,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources>
-    <string name="device_title">RealmeHub</string>
-    <string name="device_summary">Realme specific device settings</string>
-    <string name="display_title">Display</string>
-    <string name="misc_title">Misc settings</string>
-
-    <!-- otg mode -->
-    <string name="otg_mode_summary">Enable USB-OTG power supply for external headphones and flash drives</string>
-    <string name="otg_mode_title">Enable USB-OTG</string>
-    <string name="tile_otg_mode">Enable USB-OTG</string>
-
-    <!-- game mode -->
-    <string name="game_mode_summary">Boost Touch Sampling Rate</string>
-    <string name="game_mode_title">Game mode</string>
-    <string name="tile_game_mode">game mode</string>
-
-    <!-- FPS Info -->
-    <string name="fps_info_title">FPS Info Overlay</string>
-    <string name="fps_info_summary">Show current frames per second by overlay</string>
-
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- DO NOT TRANSLATE Empty summary for dynamic preferences -->
     <string name="summary_empty" translatable="false"></string>
 
