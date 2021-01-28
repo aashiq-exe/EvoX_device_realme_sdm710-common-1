@@ -28,6 +28,8 @@ import android.util.Log;
 
 import org.lineageos.settings.dirac.DiracUtils;
 import org.lineageos.settings.doze.DozeUtils;
+import org.lineageos.settings.soundcontrol.SoundControlSettings;
+import org.lineageos.settings.soundcontrol.SoundControlFileUtils;
 
 public class Startup extends BroadcastReceiver {
 
@@ -62,6 +64,15 @@ public class Startup extends BroadcastReceiver {
         restore(GameModeSwitch.getFile(), enabled);
         new DiracUtils(context).onBootCompleted();
         DozeUtils.checkDozeService(context);
+
+    int gain = Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_HEADPHONE_GAIN, 0);
+        SoundControlFileUtils.setValue(SoundControlSettings.HEADPHONE_GAIN_PATH, gain + " " + gain);
+        SoundControlFileUtils.setValue(SoundControlSettings.MICROPHONE_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_MICROPHONE_GAIN, 0));
+        SoundControlFileUtils.setValue(SoundControlSettings.SPEAKER_GAIN_PATH, Settings.Secure.getInt(context.getContentResolver(),
+                SoundControlSettings.PREF_SPEAKER_GAIN, 0));
+
         //FPS
         enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
         if (enabled) {

@@ -20,3 +20,10 @@ allow system_app vendor_perf_prop:property_service set;
 
 # CABC Mode
 allow system_app default_prop:property_service set;
+
+# Sound Control
+allow system_app {
+    sysfs_hgain
+    sysfs_mgain
+    sysfs_sgain
+}:file rw_file_perms;

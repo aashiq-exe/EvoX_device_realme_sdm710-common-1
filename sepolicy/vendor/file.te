@@ -31,3 +31,8 @@ type sysfs_fpc_key, fs_type, sysfs_type;
 
 # Kernelspace Batter saver
 type sysfs_battery_saver, fs_type, sysfs_type;
+
+# Sound Control
+type sysfs_hgain, sysfs_type, fs_type;
+type sysfs_mgain, sysfs_type, fs_type;
+type sysfs_sgain, sysfs_type, fs_type;

@@ -45,3 +45,13 @@ on property:persist.cabc_profile=2
 # CABC aggressive
 on property:persist.cabc_profile=3
   write /sys/kernel/oppo_display/cabc 3
+
+# Sound Control
+on property:sys.boot_completed=1
+  chown system system /sys/kernel/sound_control/headphone_gain
+  chown system system /sys/kernel/sound_control/mic_gain
+  chown system system /sys/kernel/sound_control/speaker_gain
+  restorecon_recursive /sys/kernel/sound_control
+  chmod 0660 /sys/kernel/sound_control/headphone_gain
+  chmod 0660 /sys/kernel/sound_control/mic_gain
+  chmod 0660 /sys/kernel/sound_control/speaker_gain

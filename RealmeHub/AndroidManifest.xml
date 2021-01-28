@@ -81,6 +81,13 @@
             android:theme="@style/Theme.Main">
         </activity>
 
+        <activity
+            android:name=".soundcontrol.SoundControlSettingsActivity"
+            android:exported="false"
+            android:label="@string/soundcontrol_title"
+            android:theme="@style/Theme.Main">
+        </activity>
+
         <!-- Quick Settings Tiles -->
         <service
             android:name="org.lineageos.settings.GameModeTileService"
