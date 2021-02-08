@@ -441,4 +441,12 @@
         <item>32</item>
     </integer-array>
 
+    <!-- Smart charge sysfs node and value for suspend/resume charging-->
+    <string name="config_SmartChargingSysfsNode" translatable="false">/sys/class/power_supply/battery/mmi_charging_enable</string>
+    <string name="config_SmartChargingSuspendValue" translatable="false">0</string>
+    <string name="config_SmartChargingResumeValue" translatable="false">1</string>
+
+    <!-- Enable Smart charging -->
+    <bool name="config_smartChargingAvailable">true</bool>
+    <bool name="config_deviceSupportSmartCharging">true</bool>
 </resources>

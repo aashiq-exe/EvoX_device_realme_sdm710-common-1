@@ -5,3 +5,4 @@ allow init socket_device:sock_file { create setattr unlink };
 allow init apex_metadata_file:lnk_file { read };
 allow init sysfs:file { write open };
 allow init sysfs_graphics_ffl:file { write open };
+allow init sysfs_battery_supply:file { setattr };
