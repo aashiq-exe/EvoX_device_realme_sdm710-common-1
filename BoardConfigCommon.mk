@@ -11,6 +11,9 @@ BUILD_BROKEN_USES_BUILD_COPY_HEADERS := true
 
 COMMON_PATH := device/realme/sdm710-common
 
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
