@@ -272,6 +272,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/privapp-permissions-hotword.xml:system/etc/permissions/privapp-permissions-hotword.xml
 
+# IORap
+PRODUCT_PACKAGES += \
+    iorap-nall
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
