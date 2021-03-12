@@ -310,6 +310,10 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
+# Misc
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.controls.xml:system/etc/permissions/android.software.controls.xml
+
 # Net
 PRODUCT_PACKAGES += \
     netutils-wrapper-1.0
