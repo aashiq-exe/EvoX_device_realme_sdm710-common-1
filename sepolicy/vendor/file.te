@@ -21,3 +21,6 @@ type proc_flash, fs_type, proc_type;
 
 # Graphics
 type vendor_sysfs_graphics, sysfs_type, fs_type;
+
+# CABC Mode
+type sysfs_graphics_ffl, sysfs_type, fs_type;

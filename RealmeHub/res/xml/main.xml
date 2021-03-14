@@ -12,6 +12,20 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
+        android:key="display"
+        android:title="@string/display_title">
+
+        <org.lineageos.settings.device.SecureSettingListPreference
+            android:icon="@drawable/ic_cabc"
+            android:key="cabc"
+            android:dialogTitle="@string/cabc_dialogTitle"
+            android:entries="@array/cabc_profiles"
+            android:entryValues="@array/cabc_values"
+            android:defaultValue="0"
+            android:title="@string/cabc_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:key="graphics"
         android:title="@string/graphics_title">
 

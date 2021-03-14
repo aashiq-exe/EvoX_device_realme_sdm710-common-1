@@ -53,6 +53,8 @@ public class DeviceSettings extends PreferenceFragment
     public static final String KEY_GAME_SWITCH = "game";
     public static final String PREF_KEY_FPS_INFO = "fps_info";
     public static final String KEY_DND_SWITCH = "dnd";
+    public static final String KEY_CABC = "cabc";
+    public static final String CABC_SYSTEM_PROPERTY = "persist.cabc_profile";
 
     public static final String KEY_SETTINGS_PREFIX = "device_setting_";
 
@@ -60,6 +62,7 @@ public class DeviceSettings extends PreferenceFragment
     private static TwoStatePreference mGameModeSwitch;
     private static NotificationManager mNotificationManager;
     public static TwoStatePreference mDNDSwitch;
+    private SecureSettingListPreference mCABC;
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -84,6 +87,11 @@ public class DeviceSettings extends PreferenceFragment
         mDNDSwitch = (TwoStatePreference) findPreference(KEY_DND_SWITCH);
         mDNDSwitch.setChecked(prefs.getBoolean(KEY_DND_SWITCH, false));
         mDNDSwitch.setOnPreferenceChangeListener(this);
+
+        mCABC = (SecureSettingListPreference) findPreference(KEY_CABC);
+        mCABC.setValue(Utils.getStringProp(CABC_SYSTEM_PROPERTY, "0"));
+        mCABC.setSummary(mCABC.getEntry());
+        mCABC.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -102,6 +110,12 @@ public class DeviceSettings extends PreferenceFragment
 
             default:
                 break;
+        }
+
+        if (preference == mCABC) {
+            mCABC.setValue((String) value);
+            mCABC.setSummary(mCABC.getEntry());
+            Utils.setStringProp(CABC_SYSTEM_PROPERTY, (String) value);
         }
         return true;
     }
