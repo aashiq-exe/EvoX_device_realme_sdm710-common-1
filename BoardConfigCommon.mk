@@ -50,6 +50,7 @@ BOARD_KERNEL_SEPARATED_DTBO := true
 KERNEL_LD := LD=ld.lld
 TARGET_KERNEL_SOURCE := kernel/realme/RMX1851
 TARGET_KERNEL_NEW_GCC_COMPILE := true
+TARGET_KERNEL_ADDITIONAL_FLAGS := AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
