@@ -5,7 +5,6 @@ ro.lmk.critical=0
 ro.lmk.critical_upgrade=false
 ro.lmk.upgrade_pressure=100
 ro.lmk.downgrade_pressure=100
-ro.lmk.log_stats=true
 
 # Dex
 ro.sys.fw.dex2oat_thread_count=8
