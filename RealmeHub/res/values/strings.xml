@@ -44,4 +44,8 @@
     <!-- FPS Info -->
     <string name="fps_info_title">FPS Info Overlay</string>
     <string name="fps_info_summary">Show current frames per second by overlay</string>
+
+    <!-- Gestures: Touchscreen gestures -->
+    <string name="touchscreen_gesture_settings_title">Touchscreen gestures</string>
+    <string name="touchscreen_gesture_settings_summary">Perform various touchscreen gestures for quick actions</string>
 </resources>
