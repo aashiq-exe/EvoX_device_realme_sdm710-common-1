@@ -27,17 +27,17 @@ namespace V1_0 {
 namespace implementation {
 
 const std::map<int32_t, TouchscreenGesture::GestureInfo> TouchscreenGesture::kGestureInfoMap = {
-    {0, {251, "Two fingers down swipe", "/proc/touchpanel/double_swipe_enable"}},
-    {1, {255, "Up arrow", "/proc/touchpanel/up_arrow_enable"}},
-    {2, {253, "Right arrow", "/proc/touchpanel/right_arrow_enable"}},
+    {0, {250, "Two fingers down swipe", "/proc/touchpanel/double_swipe_enable"}},
+    {1, {251, "Up arrow", "/proc/touchpanel/up_arrow_enable"}},
+    {2, {254, "Right arrow", "/proc/touchpanel/right_arrow_enable"}},
     {3, {252, "Down arrow", "/proc/touchpanel/down_arrow_enable"}},
-    {4, {254, "Left arrow", "/proc/touchpanel/left_arrow_enable"}},
-    {5, {64, "One finger up swipe", "/proc/touchpanel/up_swipe_enable"}},
-    {6, {63, "One finger right swipe", "/proc/touchpanel/right_swipe_enable"}},
-    {7, {66, "One finger down swipe", "/proc/touchpanel/down_swipe_enable"}},
-    {8, {65, "One finger left swipe", "/proc/touchpanel/left_swipe_enable"}},
+    {4, {253, "Left arrow", "/proc/touchpanel/left_arrow_enable"}},
+    {5, {255, "One finger up swipe", "/proc/touchpanel/up_swipe_enable"}},
+    {6, {258, "One finger right swipe", "/proc/touchpanel/right_swipe_enable"}},
+    {7, {256, "One finger down swipe", "/proc/touchpanel/down_swipe_enable"}},
+    {8, {257, "One finger left swipe", "/proc/touchpanel/left_swipe_enable"}},
     {9, {247, "Letter M", "/proc/touchpanel/letter_m_enable"}},
-    {10, {250, "Letter O", "/proc/touchpanel/letter_o_enable"}},
+    {10, {249, "Letter O", "/proc/touchpanel/letter_o_enable"}},
     {11, {246, "Letter W", "/proc/touchpanel/letter_w_enable"}},
 };
 
