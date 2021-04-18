@@ -12,15 +12,17 @@ on boot
 # Game Mode perf profile
 on property:perf_profile=0
   write /sys/module/cpu_input_boost/parameters/input_boost_duration 64
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 0
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 0
+  write /sys/module/cpu_input_boost/parameters/wake_boost_duration 1000
+  write /sys/module/cpu_input_boost/parameters/min_freq_lp 576000
+  write /sys/module/cpu_input_boost/parameters/min_freq_perf 652000
   write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor schedutil
   write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor schedutil
 
 on property:perf_profile=1
   write /sys/module/cpu_input_boost/parameters/input_boost_duration 100 
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_lp 1708800
-  write /sys/module/cpu_input_boost/parameters/input_boost_freq_hp 2208000
+  write /sys/module/cpu_input_boost/parameters/wake_boost_duration 3000
+  write /sys/module/cpu_input_boost/parameters/min_freq_lp 1708800
+  write /sys/module/cpu_input_boost/parameters/min_freq_perf 2208000 
   write /sys/devices/system/cpu/cpufreq/policy0/scaling_governor performance
   write /sys/devices/system/cpu/cpufreq/policy6/scaling_governor performance
 
