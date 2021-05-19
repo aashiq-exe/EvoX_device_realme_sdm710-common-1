@@ -78,6 +78,7 @@
 
         <Preference
             android:key="soundcontrol"
+            android:icon="@drawable/ic_soundcontrol"
             android:title="@string/soundcontrol_title"
             android:summary="@string/soundcontrol_summary">
             <intent
