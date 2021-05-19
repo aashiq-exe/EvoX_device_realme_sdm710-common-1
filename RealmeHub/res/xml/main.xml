@@ -78,7 +78,8 @@
 
         <Preference
             android:key="soundcontrol"
-            android:title="@string/soundcontrol_title">
+            android:title="@string/soundcontrol_title"
+            android:summary="@string/soundcontrol_summary">
             <intent
                     android:action="android.intent.action.MAIN"
                     android:targetPackage="org.lineageos.settings"

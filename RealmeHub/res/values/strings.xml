@@ -168,6 +168,7 @@
 
     <!-- Soundcontrol settings -->
     <string name="soundcontrol_title">Sound Control</string>
+    <string name="soundcontrol_summary">Optimize audio volumes</string>
 
     <!-- Audio amplification -->
     <string name="headphone_gain">Headphone gain</string>
