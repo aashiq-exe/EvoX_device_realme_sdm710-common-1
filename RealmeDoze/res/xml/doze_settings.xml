@@ -17,7 +17,7 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
+    <com.ssos.support.preferences.SwitchPreference
         android:key="always_on_display"
         android:disableDependentsState="true"
         android:title="@string/ambient_display_always_on_title"
@@ -28,19 +28,19 @@
         android:key="pickup_sensor"
         android:title="@string/pickup_sensor_title">
 
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:defaultValue="false"
             android:key="gesture_pick_up"
             android:summary="@string/pick_up_gesture_summary"
             android:title="@string/pick_up_gesture_title" />
     
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:defaultValue="true"
             android:key="gesture_raise_to_wake"
             android:summary="@string/raise_to_wake_gesture_summary"
             android:title="@string/raise_to_wake_gesture_title" />
 
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:defaultValue="false"
             android:key="gesture_smart_wake"
             android:summary="@string/smart_wake_gesture_summary"
@@ -52,13 +52,13 @@
         android:key="proximity_sensor"
         android:title="@string/proximity_sensor_title">
 
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:defaultValue="false"
             android:key="gesture_hand_wave"
             android:summary="@string/hand_wave_gesture_summary"
             android:title="@string/hand_wave_gesture_title" />
 
-        <SwitchPreference
+        <com.ssos.support.preferences.SwitchPreference
             android:defaultValue="false"
             android:key="gesture_pocket"
             android:summary="@string/pocket_gesture_summary"
