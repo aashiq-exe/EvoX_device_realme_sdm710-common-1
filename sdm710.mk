@@ -133,6 +133,10 @@ PRODUCT_PACKAGES += \
     libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
+# Board
+PRODUCT_BOARD_PLATFORM := sdm845
+PRODUCT_USES_QCOM_HARDWARE := true
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0 \
