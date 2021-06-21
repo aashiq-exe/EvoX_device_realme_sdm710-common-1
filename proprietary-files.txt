@@ -235,11 +235,11 @@ vendor/firmware/cryptoeng.mdt
 vendor/firmware/cryptoeng.b06
 vendor/firmware/cryptoeng.b04
 
-# Display (HDR) - from LA.UM.9.8.r1-02700-SDM710.0
+# Display (HDR) - from Realme X RUI2.0
 vendor/lib64/libhdr_tm.so|7ac38563480eab0583cb440e667a44cfa596167a
 vendor/lib/libhdr_tm.so|1e8a647523db0a09c9587a77f1f7b132a03c2354
 
-# Display (SDM) - from LA.UM.9.8.r1-02700-SDM710.0
+# Display (SDM) - from Realme X RUI2.0
 vendor/lib64/libqseed3.so|f5990f19a99ec5f33b5a262493c4e642a1429f69
 vendor/lib64/libsdm-disp-vndapis.so|4c6916fed1e304effa4c06c7207fb0e1b604f3ae
 vendor/lib64/libtinyxml2_1.so|92101861d95cbdf9625d192d0b2295baa5960b68
@@ -252,46 +252,46 @@ vendor/etc/diracmobile.config|d781cd6798a7481a8f7128d144abfb2b8794212d
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
 vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
 
-# Display (SDM)
-vendor/lib/hw/hwcomposer.sdm710.so
-vendor/lib/libsdmextension.so
-vendor/lib/libsdedrm.so
-vendor/lib/libsdm-color.so
-vendor/lib/libsdm-diag.so
-vendor/lib/libsdmcore.so
-vendor/lib64/hw/hwcomposer.sdm710.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdmcore.so
+# Display (SDM) - from Realme X RUI2.0
+vendor/lib/hw/hwcomposer.sdm710.so|03fcd2747fa3960f570428b2b30e413e70568d53
+vendor/lib/libsdmextension.so|872876273741968fda9006853979d9da1accc4fb
+vendor/lib/libsdedrm.so|2bb92523afb2d855060d4b791a8ed57d9316819b
+vendor/lib/libsdm-color.so|a18425c4e29bf76f25145d8f839108886283a45f
+vendor/lib/libsdm-diag.so|14fe3b454348fcc100f52b3efc2bade937733b6e
+vendor/lib/libsdmcore.so|9d0f6c470d5b99caad78df2fcd1935627817bec9
+vendor/lib64/hw/hwcomposer.sdm710.so|d4e0fbd473e7f056e5c20125c0cbdbb8b341881f
+vendor/lib64/libsdmextension.so|70c18b044897825bc1f15f2b6f73b64b639b6d40
+vendor/lib64/libsdedrm.so|5ce6555a207360d5216764286093fd043162ad62
+vendor/lib64/libsdm-color.so|a2b413dea186f9049cb596a6414efc2739694059
+vendor/lib64/libsdm-diag.so|1a99e15c4220e759abeefc0f4020e4a58f359a10
+vendor/lib64/libsdmcore.so|aa5bc9fcdd18729cc5ec318a7198767461e2a639
 
 # Display calibration data
 vendor/etc/OPPO_OLED_AD_calib.cfg
 
-# Display postprocessing - from LA.UM.9.8.r1-02700-SDM710.0
+# Display postprocessing - from Realme X RUI2.0
 vendor/bin/hw/vendor.display.color@1.0-service|a9d360976833d863f74df381298de696daea8acb
 vendor/bin/mm-pp-dpps|e825298dc12603df29c35aa6ad86fd0d0a7646a2
 vendor/bin/ppd|8b60669c32f091dd5832579892c91dc3eb0e8130
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|e76d6756cbb0532bc83ff98a06c4ca02fecdd8fe
 vendor/lib64/libdisplayqos.so|c3d45315871e402053dd1f353e9bde5cbf757277
-vendor/lib64/vendor.display.color@1.0.so|b1db446a13b1598675a8f538fe1d18d3b08ef570
-vendor/lib64/vendor.display.color@1.1.so|dd12242ccc66729458aa01b1960bff0a3f391d8a
-vendor/lib64/vendor.display.color@1.2.so|9d8a103b13bbae99cc5513251b4f8f361eb17d6c
-vendor/lib64/vendor.display.color@1.3.so|07bfdb50206d5802cced637c84dfa319d9b9a527
-vendor/lib64/vendor.display.color@1.4.so|0f566f339a3e93494eda56cf9c7af4e14cc71733
-vendor/lib64/vendor.display.color@1.5.so|ff11f083fbdcd120592a2e602263987f6bfd1224
-vendor/lib64/vendor.display.postproc@1.0.so|9d70df811e194e4dc6dce9a6a0c87cd74c507e9d
+vendor/lib64/vendor.display.color@1.0.so|253cd210899ea79133c7b7b9d31429e4a8d43c32
+vendor/lib64/vendor.display.color@1.1.so|fe9b373785571bb890db27523b804dc7d4411bca
+vendor/lib64/vendor.display.color@1.2.so|f40eb8c9d39776c43448431d7c7f7ecc3e4506c3
+vendor/lib64/vendor.display.color@1.3.so|3fbe0a8a317789608848f35b39ed9bfb734f9ecc
+vendor/lib64/vendor.display.color@1.4.so|1396673668977af0a8afeaa64f891c3b356f958d
+vendor/lib64/vendor.display.color@1.5.so|f1c12eb133698917385d48913358eaffd9a10879
+vendor/lib64/vendor.display.postproc@1.0.so|e56b66d744dd77bd87afbb30cab558acf15709fb
 vendor/lib/libdisp-aba.so|9271ecfa4d389d99bc592ab2a460eacef7515836
 vendor/lib/libdisplayqos.so|7b83c36716bae758c71d34b85401d7d77afa2c23
-vendor/lib/vendor.display.color@1.0.so|886f413c1b931a29893fe4d9f5f4796aca3fa6f1
-vendor/lib/vendor.display.color@1.1.so|44bb898bd34f99d803b16ddfac97e79c745ddcb6
-vendor/lib/vendor.display.color@1.2.so|08b78c5c66feced0effe286f4c838eb0e24931dc
-vendor/lib/vendor.display.color@1.3.so|0ff93cf272445878eca3bafcc48092766c45fefc
-vendor/lib/vendor.display.color@1.4.so|cf82bef31cea23f288322dddf77f88e132239b81
-vendor/lib/vendor.display.color@1.5.so|f405e74f80d5fefe45694059eebb0600d62e8ffb
-vendor/lib/vendor.display.postproc@1.0.so|3a3350370df9609dbf74e6a2273174c45992ac28
+vendor/lib/vendor.display.color@1.0.so|640ab2b9c2f0077634ed74263c5558076d431203
+vendor/lib/vendor.display.color@1.1.so|732531bbea59f5c1a90f409350d290607189c47f
+vendor/lib/vendor.display.color@1.2.so|f1ea074c629f1fc27000efb44617f7e8386b12d4
+vendor/lib/vendor.display.color@1.3.so|1467fbb9cbbb331da846fd2bcc3e644b55723bd5
+vendor/lib/vendor.display.color@1.4.so|3b7f6a489f66b2cc8b3e5a467b9fe3f95a59c775
+vendor/lib/vendor.display.color@1.5.so|e97e31b9567f9a6f9031063d2356e7391ba719e3
+vendor/lib/vendor.display.postproc@1.0.so|251c33b11743f5e24ca220b220da367996f3077b
 
 # DPM - from LA.UM.9.8.r1-02700-SDM710.0
 system_ext/bin/dpmd|bc22fa258f3975744e248dc7d9f26a00a9981ca7
@@ -495,43 +495,43 @@ vendor/lib64/vendor.qti.hardware.qccvndhal@1.0.so|711f50db51cd10607f9065998cac45
 vendor/lib/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|db159c01971f592ee36ced08583281e2b52d698b
 vendor/lib64/vendor.qti.hardware.qccvndhal@1.0-halimpl.so|8c85aec8456f69296722c10ae034bd228cd70be2
 
-# Graphics (Adreno) - from LA.UM.9.8.r1-02700-SDM710.0
+# Graphics (Adreno) - from Realme X RUI2.0
 vendor/lib64/libC2D2.so|6fb775e393ce7161b30e3a71fa0f320e86374425
-vendor/lib64/libCB.so|bfb47fec90627dd68df536dbb4734453ebae1cf6
-vendor/lib64/libOpenCL.so|4eefe5848a02894166a337abbbc5baddb72c46fb
+vendor/lib64/libCB.so|d19567c8e452abe91dd6f9d1ef70f7475164b92f
+vendor/lib64/libOpenCL.so|e8d33c6bd77d80818b7747acc806086901fe0828
 vendor/lib64/libc2d30_bltlib.so|aa37c84cf6cc1e1ac670b433c97d0bf41308f9ca
-vendor/lib64/libllvm-qcom.so|a80c58c8f316af15a7a2d089536f824836f6c056
+vendor/lib64/libllvm-qcom.so|dbb9d74ee9ce7fd9e8ead13bc114dd82939247de
 vendor/lib64/libpvr.so|ac4805ba7a7c78570a60340d01248d258046e456
 vendor/lib/libC2D2.so|267be7bd6768fa3b9bed2b9a42062cb5a77ca59b
-vendor/lib/libCB.so|c4c8fbcb73a48aa1dc14a453b47ed7f1223bb933
-vendor/lib/libOpenCL.so|cbc00e31eedea81f43cc7358181a794503b867b1
+vendor/lib/libCB.so|39bb5dee1a55c5dbccdad348097515ee9963e6ed
+vendor/lib/libOpenCL.so|a673b1809882a444bcc425e65ecab87ff21b081d
 vendor/lib/libc2d30_bltlib.so|950c705e6dbc02b646a0129e66e94e192f5cd87f
-vendor/lib/libllvm-qcom.so|063963a7d6dfa90c6fa2cbca55943b23a870e02a
+vendor/lib/libllvm-qcom.so|70e69c93f3b88455b3bc6d36b7dc8cb522952072
 vendor/lib/libpvr.so|9d7e50e1deb16ef03e05141e1babcc49160f840c
 vendor/lib64/egl/eglSubDriverAndroid.so|cd1cb25bfd16f15e0d7c6495493359838a1b6e96
 vendor/lib64/egl/libEGL_adreno.so|96a44c8e3c18c534eb1f333956541955e9f5bd7e
 vendor/lib64/egl/libGLESv1_CM_adreno.so|e2e8a079e680bf92f686fb79146651c158f6e130
-vendor/lib64/egl/libGLESv2_adreno.so|ba9e5618266e50a4d2ef723756e08979e0b4d12b
-vendor/lib64/egl/libq3dtools_adreno.so|046be35d03cbea2c73a1339eefa1bffc87ab6ebc
-vendor/lib64/egl/libq3dtools_esx.so|fe5b3f2dabe3b927544d109ac7d7926d8e3275d6
-vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
-vendor/lib64/libVkLayer_q3dtools.so|4fc15fd2c49e32b2151fb00034d389d45cf240c1
-vendor/lib64/libadreno_utils.so|010d7079615cf09413640521ed2db53e91721437
-vendor/lib64/libgpudataproducer.so|7d3c8de131f4d64a8ec82840e097f78f8b9ce004
-vendor/lib64/libgsl.so|edcab73069716f117394de07be423331631f9366
-vendor/lib64/libllvm-glnext.so|c11e3f0f5b6d21d1badcca3bc8cac947c781deeb
+vendor/lib64/egl/libGLESv2_adreno.so|71ec912b47a1583e16ccefaab7785d9359f9bfd9
+vendor/lib64/egl/libq3dtools_adreno.so|d8c8f25332d218a2dbd7cc5052e384b59d07c5a1
+vendor/lib64/egl/libq3dtools_esx.so|9d34101700af3562c4aa6cfbfe17da414c8959f9
+vendor/lib64/hw/vulkan.adreno.so|b609f79d6256f1ef7164facef16e5848f06b76c2
+vendor/lib64/libVkLayer_q3dtools.so|7245772775f0c50fc9fc43fadef1da7b9dec65b0
+vendor/lib64/libadreno_utils.so|ff553b158bb8d028a901cde06146af0a0d8f3457
+vendor/lib64/libgpudataproducer.so|660afeb918453413e0efd40ae3dad11e0ab2efb5
+vendor/lib64/libgsl.so|630302cffe48e0df53eb5ad45b579a9ae7c1f797
+vendor/lib64/libllvm-glnext.so|c7615c26a9b597c374dafe040e724b35e175dd22
 vendor/lib/egl/eglSubDriverAndroid.so|cc5acc02889131a29b624b4c19ab90b8273f393d
 vendor/lib/egl/libEGL_adreno.so|ae30bbf20dc911308407da99cb263e8de6b2eecb
 vendor/lib/egl/libGLESv1_CM_adreno.so|b94ba8188a14dd262abac1b8d667bce3319cf344
-vendor/lib/egl/libGLESv2_adreno.so|fc0454b2c9d9997f9b7f0b320482fac6db5cab2c
-vendor/lib/egl/libq3dtools_adreno.so|2ac81ee05dd4afb34ef6e56342ee1757f2db1409
-vendor/lib/egl/libq3dtools_esx.so|86bab4e474d680accbc76582c9905fe6824f702d
-vendor/lib/hw/vulkan.adreno.so|b2680e5b899d75fa3f82b457635e15c6998202a4
-vendor/lib/libVkLayer_q3dtools.so|a52a6eba8415169a5895b4615f879f966f81d5e2
-vendor/lib/libadreno_utils.so|0796bc7ce75dbad3d85e52d3aacd4ba8b59fbaf3
-vendor/lib/libgpudataproducer.so|c8623c9b2e8f330e7f5e77e5d435677719bf5688
-vendor/lib/libgsl.so|777dab024670cceb8c60054cfadcccef33151640
-vendor/lib/libllvm-glnext.so|a20bdbe458c401e9c1726f475f50fb52f9f6fa12
+vendor/lib/egl/libGLESv2_adreno.so|cd1a767ff0af9662a48b26cbf66efb3315ce40f5
+vendor/lib/egl/libq3dtools_adreno.so|fa4ad58fe986911110d70eb5e2705e0d5bc8a7dc
+vendor/lib/egl/libq3dtools_esx.so|cd4682e58a78b9503dc402637b9a9ce648f562ec
+vendor/lib/hw/vulkan.adreno.so|a92e75acd881b4c80e7cb157ed41cb599cdbcc03
+vendor/lib/libVkLayer_q3dtools.so|63857df92527df9be588f8f2e67657c7a0e3d4fd
+vendor/lib/libadreno_utils.so|cf53b5902cd681685add56de8f72f2ae5f6921c9
+vendor/lib/libgpudataproducer.so|34e7ea801217f16775c916df870659f0880a5698
+vendor/lib/libgsl.so|ba2889a0eb5dc73b8d2618672fbd24847cf55f06
+vendor/lib/libllvm-glnext.so|5ede80ce481c6a1e2baad5d261214d281aef0368
 
 # Graphics firmware 
 vendor/firmware/a615_zap.elf
@@ -562,21 +562,21 @@ vendor/firmware/a225_pm4.fw
 vendor/firmware/a300_pm4.fw
 vendor/firmware/a530_gpmu.fw2
 
-# Graphics (Vulkan) - from LA.UM.9.8.r1-02700-SDM710.0
-vendor/lib64/hw/vulkan.adreno.so|fcc99045aaf7eed0925ac2b64ff2af085212954a
-vendor/lib/hw/vulkan.adreno.so|b2680e5b899d75fa3f82b457635e15c6998202a4
+# Graphics (Vulkan) - from Realme X RUI2.0
+vendor/lib64/hw/vulkan.adreno.so|b609f79d6256f1ef7164facef16e5848f06b76c2
+vendor/lib/hw/vulkan.adreno.so|a92e75acd881b4c80e7cb157ed41cb599cdbcc03
 
 # Health
 vendor/bin/hw/android.hardware.health@2.0-service
 vendor/etc/init/android.hardware.health@2.0-service.rc
 
 # IO prefetcher - from LA.UM.9.8.r1-02700-SDM710.0
-vendor/lib64/libqti-iopd-client.so|512e12a6a86eb2dc5ad73a590c996d0e67e2ec1a
-vendor/lib64/vendor.qti.hardware.iop@1.0.so|68b541490d75f1bedd6ebae09ce5e0d5bf563890
-vendor/lib64/vendor.qti.hardware.iop@2.0.so|9ebadf4f9ac445fa0a767d33d1fe1cd6d64d9190
-vendor/lib/libqti-iopd-client.so|89ce02457de1e93a4ef0a3b20f27042350f1c6ac
-vendor/lib/vendor.qti.hardware.iop@1.0.so|ed1c0d67a740e95d5b2c37265ccaae3723c08941
-vendor/lib/vendor.qti.hardware.iop@2.0.so|b9339c98fc47f050e5288d5b27e09d274531206d
+vendor/lib64/libqti-iopd-client.so|9e7561634158cd01b037e740e51cb22cd1119e04
+vendor/lib64/vendor.qti.hardware.iop@1.0.so|dd98ed98c2e256610d29ff87125864f8d7fedbd8
+vendor/lib64/vendor.qti.hardware.iop@2.0.so|cc384159b598d81bd778beaaac9ff95508f08842
+vendor/lib/libqti-iopd-client.so|a1c3c0623bf43af7448a988a9c4d9ceea85e27dc
+vendor/lib/vendor.qti.hardware.iop@1.0.so|3e72632e5b67555b6b1b07816ee73b4d19873049
+vendor/lib/vendor.qti.hardware.iop@2.0.so|71a72d48d921ba0130f256cffda754c55106c93b
 
 # IPA Firmware
 vendor/firmware/ipa_fws.b00
