@@ -1344,10 +1344,6 @@ service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
     group radio wifi inet vendor_qti_diag log
     disabled
 
-on property:persist.sys.device_provisioned=1
-    setprop dalvik.vm.dex2oat-cpu-set 0,1,2,3,4,7
-    setprop dalvik.vm.dex2oat-threads 6
-
 service vendor.sensors-hal-1-0 /vendor/bin/hw/android.hardware.sensors@1.0-service
     interface android.hardware.sensors@1.0::ISensors default
     class hal
