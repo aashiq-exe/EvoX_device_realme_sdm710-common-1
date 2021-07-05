@@ -13,7 +13,8 @@ allow system_app vendor_sysfs_graphics:file { getattr open read };
 allow system_app sysfs:file { getattr open read };
 
 # OTG Tile
-allow system_app sysfs_usb_supply:file { write };
+allow system_app sysfs_usb_supply:dir { search };
+allow system_app sysfs_usb_supply:file rw_file_perms;
 
 # Perf profile
 get_prop(system_app, vendor_perf_prop)

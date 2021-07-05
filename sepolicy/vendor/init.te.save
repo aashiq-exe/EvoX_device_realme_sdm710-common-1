@@ -7,5 +7,5 @@ allow init sysfs:file { write open };
 allow init sysfs_graphics_ffl:file { write open };
 allow init sysfs_battery_supply:file { setattr };
 allow init sysfs_devices_system_cpu:file { write open };
-allow init sysfs:file { setattr };
-allow init sysfs_usb_supply:file { setattr };
+allow init sysfs:file { settatr };
+allow init sysfs_usb_supply { settatr };
