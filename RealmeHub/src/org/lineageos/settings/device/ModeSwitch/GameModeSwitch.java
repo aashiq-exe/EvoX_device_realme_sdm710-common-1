@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.util.Log;
 import android.app.NotificationManager;
@@ -27,8 +27,6 @@ import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceManager;
 import android.widget.Toast;
-
-import org.lineageos.settings.device.DeviceSettings;
 
 public class GameModeSwitch implements OnPreferenceChangeListener {
     private static final String FILE = "/proc/touchpanel/game_switch_enable";

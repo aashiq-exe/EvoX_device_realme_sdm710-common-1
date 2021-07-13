@@ -14,15 +14,13 @@
  * limitations under the License.
  */
 
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.os.Handler;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
-
-import org.lineageos.settings.device.R;
 
 // TODO: Add FPS drawables
 public class FPSTileService extends TileService {

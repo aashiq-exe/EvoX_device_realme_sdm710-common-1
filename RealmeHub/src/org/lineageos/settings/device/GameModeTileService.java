@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.annotation.TargetApi;
 import android.app.NotificationManager;
@@ -26,8 +26,6 @@ import android.os.SystemProperties;
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
 import androidx.preference.PreferenceManager;
-
-import org.lineageos.settings.device.DeviceSettings;
 
 @TargetApi(24)
 public class GameModeTileService extends TileService {

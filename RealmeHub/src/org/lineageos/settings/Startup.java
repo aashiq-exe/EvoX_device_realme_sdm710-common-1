@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -24,9 +24,14 @@ import android.content.SharedPreferences;
 import android.provider.Settings;
 import android.text.TextUtils;
 import androidx.preference.PreferenceManager;
+import android.util.Log;
+
+import org.lineageos.settings.dirac.DiracUtils;
+import org.lineageos.settings.doze.DozeUtils;
 
 public class Startup extends BroadcastReceiver {
 
+    private static final boolean DEBUG = false;
     private static final String TAG = "BootReceiver";
     private static final String ONE_TIME_TUNABLE_RESTORE = "hardware_tunable_restored";
 
@@ -49,11 +54,14 @@ public class Startup extends BroadcastReceiver {
     @Override
     public void onReceive(final Context context, final Intent bootintent) {
         boolean enabled = false;
+        if (DEBUG) Log.d(TAG, "Received boot completed intent");
         SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_OTG_SWITCH, false);
         restore(OTGModeSwitch.getFile(), enabled);
         enabled = sharedPrefs.getBoolean(DeviceSettings.KEY_GAME_SWITCH, false);
         restore(GameModeSwitch.getFile(), enabled);
+        new DiracUtils(context).onBootCompleted();
+        DozeUtils.checkDozeService(context);
         //FPS
         enabled = sharedPrefs.getBoolean(DeviceSettings.PREF_KEY_FPS_INFO, false);
         if (enabled) {

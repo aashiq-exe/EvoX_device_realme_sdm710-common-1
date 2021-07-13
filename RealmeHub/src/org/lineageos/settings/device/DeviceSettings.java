@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -44,6 +44,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceGroup;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.TwoStatePreference;
+
+import org.lineageos.settings.preferences.SecureSettingListPreference;
 
 public class DeviceSettings extends PreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -101,9 +103,9 @@ public class DeviceSettings extends PreferenceFragment
             case PREF_KEY_FPS_INFO:
                 boolean enabled = (Boolean) value;
                 if (enabled) {
-                    Utils.startService(this.getContext(), org.lineageos.settings.device.FPSInfoService.class);
+                    Utils.startService(this.getContext(), org.lineageos.settings.FPSInfoService.class);
                 } else {
-                    Utils.stopService(this.getContext(), org.lineageos.settings.device.FPSInfoService.class);
+                    Utils.stopService(this.getContext(), org.lineageos.settings.FPSInfoService.class);
                 }
                 break;
 

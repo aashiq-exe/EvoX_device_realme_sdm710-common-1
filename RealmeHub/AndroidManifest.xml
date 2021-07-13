@@ -14,7 +14,7 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           android:sharedUserId="android.uid.system"
-          package="org.lineageos.settings.device"
+          package="org.lineageos.settings"
           android:versionCode="1"
           android:versionName="1.0" >
 
@@ -22,8 +22,10 @@
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <protected-broadcast android:name="org.lineageos.settings.device.UPDATE_SETTINGS" />
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
     <uses-sdk
         android:minSdkVersion="28"
@@ -32,6 +34,7 @@
     <application
         android:icon="@drawable/ic_settings_device"
         android:label="@string/device_title"
+        android:persistent="true"
         android:theme="@style/AppTheme">
 
         <!-- Device Settings -->
@@ -54,15 +57,33 @@
 
         <activity android:name=".DeviceSettings" />
 
-        <receiver android:name="org.lineageos.settings.device.Startup" >
+        <receiver android:name=".Startup" >
             <intent-filter android:priority="100" >
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
+        <service
+            android:name=".doze.DozeService"
+            android:permission="RealmeDozeService">
+        </service>
+
+        <activity
+            android:name=".doze.DozeSettingsActivity"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/Theme.Main">
+        </activity>
+
+        <activity
+            android:name=".dirac.DiracActivity"
+            android:label="@string/dirac_title"
+            android:theme="@style/Theme.Main">
+        </activity>
+
         <!-- Quick Settings Tiles -->
-       <service
-            android:name="org.lineageos.settings.device.GameModeTileService"
+        <service
+            android:name="org.lineageos.settings.GameModeTileService"
             android:icon="@drawable/ic_game_tile"
             android:label="@string/tile_game_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -72,11 +93,11 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.FPSInfoService"
+            android:name="org.lineageos.settings.FPSInfoService"
             android:exported="false">
         </service>
         <service
-            android:name="org.lineageos.settings.device.FPSTileService"
+            android:name="org.lineageos.settings.FPSTileService"
             android:icon="@drawable/ic_fps_info"
             android:label="@string/fps_info_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -86,7 +107,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.OtgToggleService"
+            android:name="org.lineageos.settings.OtgToggleService"
             android:icon="@drawable/ic_otg_tile"
             android:label="@string/tile_otg_mode"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -96,7 +117,7 @@
             </intent-filter>
         </service>
         <service
-            android:name="org.lineageos.settings.device.CABCTileService"
+            android:name="org.lineageos.settings.CABCTileService"
             android:icon="@drawable/ic_cabc"
             android:label="@string/cabc_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
@@ -105,8 +126,14 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-        <service android:name="org.lineageos.settings.device.SmartChargingService"
-                android:exported="false">
+        <service
+            android:name="org.lineageos.settings.dirac.DiracTileService"
+            android:icon="@drawable/dirac_qs_tile_icon"
+            android:label="@string/dirac_qs_tile_title"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE"/>
+            </intent-filter>
         </service>
     </application>
 </manifest>

@@ -394,9 +394,7 @@ PRODUCT_PACKAGES += \
 
 # RealmeHub
 PRODUCT_PACKAGES += \
-    RealmeHub \
-    RealmeDoze \
-    Dirac
+    RealmeHub
 
 # RenderScript HAL
 PRODUCT_PACKAGES += \

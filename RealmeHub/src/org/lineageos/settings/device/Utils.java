@@ -15,7 +15,7 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.content.Context;
 import android.content.Intent;

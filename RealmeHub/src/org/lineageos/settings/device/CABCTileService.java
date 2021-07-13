@@ -15,14 +15,10 @@
 * along with this program. If not, see <http://www.gnu.org/licenses/>.
 *
 */
-package org.lineageos.settings.device;
+package org.lineageos.settings;
 
 import android.service.quicksettings.Tile;
 import android.service.quicksettings.TileService;
-
-import org.lineageos.settings.device.DeviceSettings;
-import org.lineageos.settings.device.Utils;
-import org.lineageos.settings.device.R;
 
 public class CABCTileService extends TileService {
 
