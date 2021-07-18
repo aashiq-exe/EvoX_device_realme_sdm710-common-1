@@ -25,5 +25,4 @@ allow system_app default_prop:property_service set;
 allow system_app {
     sysfs_hgain
     sysfs_mgain
-    sysfs_sgain
 }:file rw_file_perms;
