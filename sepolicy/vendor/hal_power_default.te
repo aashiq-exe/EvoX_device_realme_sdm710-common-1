@@ -8,6 +8,7 @@ r_dir_file(hal_power_default, sysfs_graphics)
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_perms;
 allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default hal_power_default:capability sys_admin;
 
 set_prop(hal_power_default, vendor_power_prop)
 
@@ -17,3 +18,4 @@ allow hal_power_default device_latency:chr_file { write };
 
 allow hal_power_default sysfs_battery_saver:dir r_dir_perms;
 allow hal_power_default sysfs_battery_saver:file rw_file_perms;
+allow hal_power_default sysfs:file { open read getattr };
