@@ -500,8 +500,3 @@ on boot
 # Permissions for vibration controller
     chown system system /sys/class/leds/vibrator/vmax_mv
     chmod 0660 /sys/class/leds/vibrator/vmax_mv
-
-on property:sys.boot_completed=1
-    # Restrict permissions to socket file
-    # to hide Magisk & co.
-    chmod 440 /proc/net/unix
